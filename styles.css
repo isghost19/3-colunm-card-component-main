@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr );
+    grid-template-rows: repeat(1, 400px);
+    place-content: center;
+    max-width: 340px;
+    margin: 120px auto;
+}
+
+.card {
+    padding: 0px 30px;
+    height: 425px;
+    width: 100%;
+}
+
+img {
+    margin: 30px 0 0 20px;
+}
+
+.card p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-right: 20px;
+    line-height: 1.8;
+}
+
+.card h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    margin-left: 20px;
+}
+
+button {
+    margin-left: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: hsl(0, 0%, 95%);
+    margin-top: 20px; /* 380px | 1400px no va*/
+}
+
+.sedans button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%); 
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 613px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr );
+        grid-template-rows: repeat(1, 400px);
+        place-content: center;
+        max-width: 840px;
+        margin: 120px auto;
+    }
+
+    button {
+        margin-left: 20px;
+        padding: 15px 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        border: none;
+        background-color: hsl(0, 0%, 95%);
+        cursor: pointer;
+        max-width: 150px;
+    }
+
+    .sedans {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .luxury {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .card {
+        padding: 10px;
+        height: 425px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    img {
+        flex: none;
+        width: 65px;
+        height: 45px;
+    }
+
+    .card p {
+        font-family: 'Lexend Deca', sans-serif;
+        color: hsla(0, 0%, 100%, 0.75);
+        margin: 0px 10px 10px 20px;
+        line-height: 1.4;
+        max-width: 260px;
+    }
+}
